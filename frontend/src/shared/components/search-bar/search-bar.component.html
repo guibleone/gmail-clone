@@ -1,1 +1,21 @@
-<p>search-bar works!</p>
+<div [class.clicked]="isClicked()" class="search-bar">
+  <button matTooltip="Pesquisa" mat-icon-button aria-label="Botão de pesquisa">
+    <mat-icon [class.icon-clicked]="isClicked()">search</mat-icon>
+  </button>
+
+  <input autocomplete="off" (focus)="toggleSearchBar()" (blur)="toggleSearchBar()" placeholder="Pesquisar e-mail"
+    type="text" />
+
+  @if (isClicked()) {
+  <div class="suggestions">
+    <ul>
+      <li>E-mail A</li>
+      <li>E-mail B</li>
+    </ul>
+  </div>
+  }
+
+  <button matTooltip="Mostrar opções de pesquisa" mat-icon-button aria-label="Opções de pesquisa avançada">
+    <mat-icon [class.icon-clicked]="isClicked()">tune</mat-icon>
+  </button>
+</div>

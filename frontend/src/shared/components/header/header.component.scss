@@ -3,20 +3,20 @@ header {
   display: flex;
   align-items: center;
   padding: var(--space-sm);
-  justify-content: space-between;
   padding: 0px var(--space-md);
 }
 
 .logo {
   display: flex;
   gap: var(--space-sm);
+  width: var(--sidebar-width);
 }
-
 
 .actions {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+  margin-left: auto;
 }
 
 .img-button {
@@ -31,4 +31,3 @@ header {
   }
 
 }
-
